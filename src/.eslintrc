@@ -1,5 +1,9 @@
 {
   "env": {
     "jest": true
-  }
+  },
+  "prettier/prettier": ["error", {
+
+    "endOfLine":"auto"
+  }]
 }

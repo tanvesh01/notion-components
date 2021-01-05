@@ -1,0 +1,10 @@
+.root {
+  border: 0;
+  font-size: 5rem;
+  font-weight: 700;
+  background-color: white;
+}
+
+.root:focus {
+  border: 0;
+}
