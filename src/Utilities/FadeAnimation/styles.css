@@ -1,5 +1,6 @@
 @keyframes fadeIn {
   0% {
+    background-color: black;
     opacity: 0;
   }
   100% {
