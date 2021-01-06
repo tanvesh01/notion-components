@@ -1,0 +1,40 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* @keyframes openAnimation {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes closeAnimation {
+  from {
+    z-index: 2;
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    z-index: -1;
+    transform: scale(0.8);
+    opacity: 0;
+  }
+} */

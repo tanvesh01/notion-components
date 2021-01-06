@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './Button.module.css'
-
+import Fade from '../../Utilities/FadeAnimation/Fade'
 const Button = ({ children }) => {
   const [display, setDisplay] = React.useState(false)
+  // console.log(display)
   return (
     <div className={styles.container}>
       <button className={` ${styles.mainButton} ${styles.root}`}>
@@ -22,15 +23,9 @@ const Button = ({ children }) => {
           <path d='M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z' />
         </svg>
       </button>
-      <div
-        // className={` ${display ? '' :  styles.active}  ${styles.dropdown}`}
-        className={display ? styles.dropdown : styles.hidden}
-      >
-        {/* <div>
-          {' '}
-          <p>Essential Dropdown</p>{' '}
-        </div> */}
-      </div>
+      <Fade show={display}>
+        <div className={styles.dropdown}></div>
+      </Fade>
     </div>
   )
 }

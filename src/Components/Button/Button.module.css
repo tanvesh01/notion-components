@@ -37,9 +37,6 @@
   box-shadow: rgba(15, 15, 15, 0.05) 0px 0px 0px 1px,
     rgba(15, 15, 15, 0.1) 0px 3px 6px, rgba(15, 15, 15, 0.2) 0px 9px 24px;
   /*  */
-  animation-name: openAnimation;
-  animation-duration: 0.5s;
-  transition: opacity 0.5s, transform 0.5s;
 }
 .hidden {
   /* display: none; */
@@ -50,28 +47,6 @@
   animation-duration: 0.5s;
 }
 
-@keyframes openAnimation {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@keyframes closeAnimation {
-  from {
-    z-index: 2;
-    opacity: 1;
-    transform: scale(1);
-  }
-  to {
-    z-index: -1;
-    transform: scale(0.8);
-    opacity: 0;
-  }
-}
 .container {
   display: flex;
   position: relative;
