@@ -24,7 +24,16 @@ const Button = ({ children }) => {
         </svg>
       </button>
       <Fade show={display}>
-        <div className={styles.dropdown}></div>
+        <div className={styles.dropdown}>
+          <div className={styles.headingContainer}>
+            <p className={styles.heading}>Simple Dropdown</p>
+          </div>
+          <ul className={styles.listContainer}>
+            <li className={styles.items}>Option A</li>
+            <li className={styles.items}>Option B</li>
+            <li className={styles.items}>Option C</li>
+          </ul>
+        </div>
       </Fade>
     </div>
   )

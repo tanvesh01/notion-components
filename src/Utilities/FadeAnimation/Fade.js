@@ -2,8 +2,18 @@ import React, { useEffect, useState, Fragment } from 'react'
 import './styles.css'
 const Fade = ({ show, children }) => {
   const [render, setRender] = useState(show)
-  const mountedStyle = { animation: 'inAnimation 500ms ease-in' }
-  const unmountedStyle = { animation: 'outAnimation 510ms ease-in' }
+  const mountedStyle = {
+    animation: 'inAnimation 500ms ease-out',
+    left: '-125%',
+    top: '20%',
+    position: 'absolute'
+  }
+  const unmountedStyle = {
+    animation: 'outAnimation 400ms ease-out',
+    left: '-125%',
+    position: 'absolute',
+    top: '20%'
+  }
   useEffect(() => {
     if (show) setRender(true) // if show true the render true
   }, [show])
@@ -28,29 +38,27 @@ const Fade = ({ show, children }) => {
         <style>
           {`
 
-           @keyframes inAnimation {
-    0% {
-      transform: scale(0.1);
-      opacity: 0;
-    }
-    60% {
-      transform: scale(1.2);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
+            @keyframes inAnimation {
+              from {
+                opacity: 0.5;
+                transform: scale(0.8);
+              }
+              to {
+                opacity: 1;
+                transform: scale(1);
+              }
+            }
 
-  @keyframes outAnimation {
-    20% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(0);
-      opacity: 0;
-    }
-  }
+            @keyframes outAnimation {
+              from {
+                opacity: 1;
+                transform: scale(1);
+              }
+              to {
+                transform: scale(0.8);
+                opacity: 0;
+              }
+            }
           `}
         </style>
       </Fragment>

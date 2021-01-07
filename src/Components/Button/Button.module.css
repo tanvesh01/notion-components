@@ -6,6 +6,9 @@
   border: 1px solid #0088be;
   font-weight: 600;
 }
+.root:active {
+  background-color: rgb(9, 144, 197);
+}
 .mainButton {
   padding: 0.5rem 1.1rem;
   border-top-right-radius: 0;
@@ -31,22 +34,37 @@
   position: absolute;
   transform-origin: 50% top;
   width: 360px;
-  height: 100px;
-  left: -125px;
+  /* height: 100px; */
+  /* left: -125px; */
   top: 36px;
+  transform-origin: 50% top;
   box-shadow: rgba(15, 15, 15, 0.05) 0px 0px 0px 1px,
     rgba(15, 15, 15, 0.1) 0px 3px 6px, rgba(15, 15, 15, 0.2) 0px 9px 24px;
   /*  */
 }
-.hidden {
-  /* display: none; */
-  z-index: -1;
-  opacity: 0;
-  transform: scale(0);
-  animation-name: closeAnimation;
-  animation-duration: 0.5s;
+.headingContainer {
+  padding-left: 20px;
+  font-weight: 500;
 }
-
+.heading {
+  margin-bottom: 0;
+}
+.listContainer {
+  list-style-type: none;
+  margin: 5px 0 1em 0;
+  padding: 0;
+}
+.items {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  cursor: pointer;
+  padding: 2px 0 4px 20px;
+  transform: translateZ(-1.8%);
+}
+.items:hover {
+  background-color: rgba(15, 15, 15, 0.05);
+}
 .container {
   display: flex;
   position: relative;
