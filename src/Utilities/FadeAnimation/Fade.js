@@ -4,15 +4,15 @@ const Fade = ({ show, children }) => {
   const [render, setRender] = useState(show)
   const mountedStyle = {
     animation: 'inAnimation 500ms ease-out',
-    left: '-125%',
-    top: '20%',
+    transformOrigin: '50% bottom',
+    top: '103%',
     position: 'absolute'
   }
   const unmountedStyle = {
-    animation: 'outAnimation 400ms ease-out',
-    left: '-125%',
-    position: 'absolute',
-    top: '20%'
+    animation: 'outAnimation 500ms ease-out',
+    transformOrigin: '50% bottom',
+    top: '103%',
+    position: 'absolute'
   }
   useEffect(() => {
     if (show) setRender(true) // if show true the render true
@@ -27,9 +27,6 @@ const Fade = ({ show, children }) => {
       <Fragment>
         <div
           style={show ? mountedStyle : unmountedStyle}
-          // onAnimationEnd={onAnimationEnd}
-          // onAnimationEndCapture={onAnimationEnd}
-          // onAnimationStart={() => console.log('start')}
           onAnimationEnd={onAnimationEnd}
           key='123'
         >
@@ -40,8 +37,8 @@ const Fade = ({ show, children }) => {
 
             @keyframes inAnimation {
               from {
-                opacity: 0.5;
-                transform: scale(0.8);
+                opacity: 0;
+                transform: scale(0.2);
               }
               to {
                 opacity: 1;
@@ -55,7 +52,7 @@ const Fade = ({ show, children }) => {
                 transform: scale(1);
               }
               to {
-                transform: scale(0.8);
+                transform: scale(0);
                 opacity: 0;
               }
             }

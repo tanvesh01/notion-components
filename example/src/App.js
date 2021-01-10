@@ -1,20 +1,42 @@
 import React from 'react'
 import classes from './App.module.css'
-import { TextBox, Button } from 'notion-components'
+import { Button } from 'notion-components'
 import 'notion-components/dist/index.css'
+// "notion-components": "file:.."
 
 const App = () => {
-  const [value, setValue] = React.useState('')
-  const onChangeHandler = (e) => {
-    setValue(e.target.value)
-    console.log(e.target.value)
+  const first = () => {
+    console.log('1st option was clicked')
   }
-
+  const second = () => {
+    console.log('2nd option was clicked')
+  }
+  const third = () => {
+    console.log('3rd option was clicked')
+  }
+  const Click = () => {
+    console.log('hrey')
+  }
+  const options = [
+    {
+      value: 'Option 1',
+      function: first
+    },
+    {
+      value: 'Option 2',
+      function: second
+    },
+    {
+      value: 'Option 3',
+      function: third
+    }
+  ]
   return (
     <>
       <div className={classes.Layout}>
-        <Button>New</Button>
-        {/* <TextBox value={value} onChange={onChangeHandler} /> */}
+        <Button options={options} onClick={Click}>
+          New
+        </Button>
       </div>
     </>
   )
