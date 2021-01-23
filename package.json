@@ -1,6 +1,6 @@
 {
   "name": "notion-components",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Made with create-react-library",
   "author": "tanvesh01",
   "license": "MIT",
@@ -49,5 +49,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  }
 }

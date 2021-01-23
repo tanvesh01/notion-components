@@ -1,30 +1,55 @@
-# notion-components
+<h1 align="center">Welcome to notion-components 👋</h1>
+<p>
+  <a href="https://www.npmjs.com/package/notion-components" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/notion-components.svg">
+  </a>
+  <img src="https://img.shields.io/badge/node-%3E%3D10-blue.svg" />
+  <a href="#" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+  <a href="https://twitter.com/Sarve\_\_\_tanvesh" target="_blank">
+    <img alt="Twitter: Sarve\_\_\_tanvesh" src="https://img.shields.io/twitter/follow/Sarve\_\_\_tanvesh.svg?style=social" />
+  </a>
+</p>
 
-> Made with create-react-library
+> React Component Library for the minimalist
 
-[![NPM](https://img.shields.io/npm/v/notion-components.svg)](https://www.npmjs.com/package/notion-components) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+### 🏠 [Homepage](https://github.com/tanvesh01/react-essentials)
+
+## Prerequisites
+
+- node >=10
 
 ## Install
 
-```bash
-npm install --save notion-components
+```sh
+npm install
 ```
 
 ## Usage
 
-```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'notion-components'
-import 'notion-components/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+```sh
+npm run start
 ```
 
-## License
+## Run tests
 
-MIT © [tanvesh01](https://github.com/tanvesh01)
+```sh
+npm run test
+```
+
+## Author
+
+👤 **tanvesh01**
+
+* Website: tanvesh.vercel.app
+* Twitter: [@Sarve\_\_\_tanvesh](https://twitter.com/Sarve\_\_\_tanvesh)
+* Github: [@tanvesh01](https://github.com/tanvesh01)
+* LinkedIn: [@tanvesh01](https://linkedin.com/in/tanvesh01)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

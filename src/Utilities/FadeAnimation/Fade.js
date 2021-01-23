@@ -1,17 +1,18 @@
 import React, { useEffect, useState, Fragment } from 'react'
-import './styles.css'
-const Fade = ({ show, children }) => {
+const Fade = ({ show, children, left, top }) => {
   const [render, setRender] = useState(show)
   const mountedStyle = {
-    animation: 'inAnimation 500ms ease-out',
+    animation: 'inAnimation 300ms ease-out',
     transformOrigin: '50% bottom',
-    top: '103%',
+    top: top ? top : '80%',
+    left: left ? left : '0px',
     position: 'absolute'
   }
   const unmountedStyle = {
-    animation: 'outAnimation 500ms ease-out',
+    animation: 'outAnimation 200ms ease-out',
     transformOrigin: '50% bottom',
-    top: '103%',
+    top: top ? top : '80%',
+    left: left ? left : '0px',
     position: 'absolute'
   }
   useEffect(() => {
@@ -34,25 +35,19 @@ const Fade = ({ show, children }) => {
         </div>
         <style>
           {`
-
             @keyframes inAnimation {
               from {
-                opacity: 0;
-                transform: scale(0.2);
+                opacity: 0.4;
               }
               to {
                 opacity: 1;
-                transform: scale(1);
               }
             }
-
             @keyframes outAnimation {
               from {
                 opacity: 1;
-                transform: scale(1);
               }
               to {
-                transform: scale(0);
                 opacity: 0;
               }
             }

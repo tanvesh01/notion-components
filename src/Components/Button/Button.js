@@ -1,10 +1,14 @@
 import React, { Fragment } from 'react'
-import styles from './Button.module.css'
+import classes from './Button.module.css'
 import Fade from '../../Utilities/FadeAnimation/Fade'
-const Button = ({ children, options, onClick }) => {
+import PropTypes from 'prop-types'
+// right top
+const Button = ({ children, options, onClick, left, top, width }) => {
+  console.log(left)
+  console.log(top)
   const [display, setDisplay] = React.useState(false)
   return (
-    <div className={styles.container}>
+    <div className={classes.container}>
       <button
         onClick={() => {
           onClick ? onClick() : null
@@ -14,15 +18,22 @@ const Button = ({ children, options, onClick }) => {
             ? null
             : { borderTopRightRadius: '5px', borderBottomRightRadius: '5px' }
         }
-        className={` ${styles.mainButton} ${styles.root}`}
+        className={`${classes.mainButton} ${classes.root}`}
       >
         {children}
       </button>
+      {display ? (
+        <div
+          onClick={() => setDisplay(false)}
+          className={classes.overlay}
+        ></div>
+      ) : null}
+
       {options && options.length > 0 ? (
         <Fragment>
           <button
             onClick={() => setDisplay(!display)}
-            className={`${styles.root} ${styles.dropDownButton}`}
+            className={`${classes.root} ${classes.dropDownButton}`}
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -34,12 +45,15 @@ const Button = ({ children, options, onClick }) => {
               <path d='M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z' />
             </svg>
           </button>
-          <Fade show={display}>
-            <div className={styles.dropdown}>
-              <div className={styles.headingContainer}>
-                <p className={styles.heading}>Simple Dropdown</p>
+          <Fade left={left} top={top} show={display}>
+            <div
+              className={classes.dropdown}
+              style={width ? { width: width } : null}
+            >
+              <div className={classes.headingContainer}>
+                <p className={classes.heading}> Dropdown</p>
               </div>
-              <ul className={styles.listContainer}>
+              <ul className={classes.listContainer}>
                 {options.map((item) => {
                   return (
                     <li
@@ -47,7 +61,7 @@ const Button = ({ children, options, onClick }) => {
                         item.function()
                         setDisplay(false)
                       }}
-                      className={styles.items}
+                      className={classes.items}
                     >
                       {item.value}
                     </li>
@@ -60,6 +74,13 @@ const Button = ({ children, options, onClick }) => {
       ) : null}
     </div>
   )
+}
+
+Button.propTypes = {
+  left: PropTypes.string,
+  right: PropTypes.string,
+  width: PropTypes.string,
+  options: PropTypes.array
 }
 
 export default Button

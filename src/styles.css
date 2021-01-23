@@ -1,4 +1,4 @@
-.root {
+/* .root {
   cursor: pointer;
   color: white;
   border-radius: 5px;
@@ -25,39 +25,36 @@
   background-size: 0.65em auto, 100%;
 }
 .dropdown {
-  padding: 1rem;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
   position: absolute;
   transform-origin: 50% bottom;
-  width: fit-content;
+  width: 360px;
   background-color: white;
   transform-origin: center center;
   box-shadow: rgba(15, 15, 15, 0.05) 0px 0px 0px 1px,
     rgba(15, 15, 15, 0.1) 0px 3px 6px, rgba(15, 15, 15, 0.2) 0px 9px 24px;
 }
 .headingContainer {
+  padding-left: 20px;
   font-weight: 500;
 }
 .heading {
-  margin: 0;
-  padding: 0 10px;
-  text-align: start;
+  margin-bottom: 0;
 }
 .listContainer {
   list-style-type: none;
-  margin: 5px 0 0 0;
+  margin: 5px 0 1em 0;
   padding: 0;
 }
 .items {
-  white-space: nowrap;
-  border-radius: 5px;
   display: flex;
   align-items: center;
   margin: 5px 0;
   cursor: pointer;
-  padding: 5px 10px 5px 10px;
+  padding: 2px 0 4px 20px;
+  transform: translateZ(-1.8%);
 }
 .items:hover {
   background-color: rgba(15, 15, 15, 0.05);
@@ -70,13 +67,4 @@
 .container {
   display: flex;
   position: relative;
-  width: fit-content;
-}
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background-color: aliceblue; */
-}
+} */

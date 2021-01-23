@@ -15,26 +15,31 @@ const App = () => {
     console.log('3rd option was clicked')
   }
   const Click = () => {
-    console.log('hrey')
+    console.log('Did you just click me?!')
   }
   const options = [
     {
-      value: 'Option 1',
+      value: 'Started from the bottom',
       function: first
     },
     {
-      value: 'Option 2',
+      value: 'Sometimes its the journey',
       function: second
     },
     {
-      value: 'Option 3',
+      value: 'Trust the process',
       function: third
     }
   ]
   return (
     <>
       <div className={classes.Layout}>
-        <Button options={options} onClick={Click}>
+        <Button
+          top='100%'
+          left='30px'
+          options={options}
+          onClick={() => Click()}
+        >
           New
         </Button>
       </div>
