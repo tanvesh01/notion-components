@@ -22,7 +22,6 @@ const Fade = ({ show, children, left, top }) => {
   const onAnimationEnd = () => {
     if (!show) setRender(false) // if show false then render false
   }
-  console.log(render)
   return (
     render && (
       <Fragment>

@@ -3,13 +3,12 @@ import classes from './Button.module.css'
 import Fade from '../../Utilities/FadeAnimation/Fade'
 import PropTypes from 'prop-types'
 // right top
-const Button = ({ children, options, onClick, left, top, width }) => {
-  console.log(left)
-  console.log(top)
+const Button = ({ children, options, onClick, left, top, width, disabled }) => {
   const [display, setDisplay] = React.useState(false)
   return (
     <div className={classes.container}>
       <button
+        disabled={disabled ? disabled : false}
         onClick={() => {
           onClick ? onClick() : null
         }}
@@ -32,6 +31,7 @@ const Button = ({ children, options, onClick, left, top, width }) => {
       {options && options.length > 0 ? (
         <Fragment>
           <button
+            disabled={disabled ? disabled : false}
             onClick={() => setDisplay(!display)}
             className={`${classes.root} ${classes.dropDownButton}`}
           >

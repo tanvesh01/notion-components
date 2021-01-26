@@ -1,8 +1,6 @@
 import React from 'react'
-import classes from './App.module.css'
 import { Button } from 'notion-components'
 import 'notion-components/dist/index.css'
-// "notion-components": "file:.."
 
 const App = () => {
   const first = () => {
@@ -14,7 +12,7 @@ const App = () => {
   const third = () => {
     console.log('3rd option was clicked')
   }
-  const Click = () => {
+  const onPress = () => {
     console.log('Did you just click me?!')
   }
   const options = [
@@ -32,18 +30,9 @@ const App = () => {
     }
   ]
   return (
-    <>
-      <div className={classes.Layout}>
-        <Button
-          top='100%'
-          left='30px'
-          options={options}
-          onClick={() => Click()}
-        >
-          New
-        </Button>
-      </div>
-    </>
+    <Button top='100%' left='30px' options={options} onClick={() => onPress()}>
+      New
+    </Button>
   )
 }
 
