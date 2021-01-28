@@ -18,15 +18,13 @@
 
 <a  href="https://twitter.com/Sarve\_\_\_tanvesh"  target="_blank">
 
-<img  alt="Twitter: Sarve\_\_\_tanvesh"  src="https://img.shields.io/twitter/follow/Sarve\_\_\_tanvesh.svg?style=social" />
+<img  alt="Twitter: Sarve\_\_\_tanvesh"  src="https://img.shields.io/twitter/follow/Sarve___tanvesh?label=Follow%20me%21&style=social" />
 
 </a>
 
 </p>
 
 > React Component Library for the minimalist
-
-### 🏠 [Homepage](https://github.com/tanvesh01/react-essentials)
 
 ## Prerequisites
 
@@ -38,6 +36,12 @@
 
 npm install notion-components
 
+```
+
+> When importing a component make sure to import the css file too. Like this
+
+```jsx
+import 'notion-components/dist/index.css'
 ```
 
 ### Simple `Button` rendered with a Dropdown
@@ -91,6 +95,10 @@ export default App
 
 ### Simple `Button` rendered without a Dropdown
 
+![Button without a dropdown](https://s2.gifyu.com/images/buttonMost.gif)
+
+Renders a `Button` without a dropdown. If the `option` prop's length is found to be 0 or if its value is `null`, then the deopdown will not render at all.
+
 ```jsx
 import React from 'react'
 import { Button } from 'notion-components'
@@ -107,20 +115,20 @@ export default App
 
 ### Simple `Button` props
 
-| Attribute |    Type    |    Default    | Description                                                                                    |
-| :-------- | :--------: | :-----------: | :--------------------------------------------------------------------------------------------- |
-| onClick   | `function` |    `null`     | Default click/press function                                                                   |
-| disabled  |   `bool`   |    `false`    | Should render a disabled button                                                                |
-| options   |  `array`   | `Empty array` | An array of objects with properties .If empty array is passed, Dropdown button will not render |
-| top       |  `string`  |    `"80%"`    | Controls the `top` css property for the Dropdown                                               |
-| left      |  `string`  |    `"0px"`    | Controls the `left` css property for the Dropdown                                              |
-| width     |  `string`  |    `null`     | Controls the `width` css property for the Dropdown                                             |
+| Attribute |    Type    | Default | Description                                                                                    |
+| :-------- | :--------: | :-----: | :--------------------------------------------------------------------------------------------- |
+| onClick   | `function` | `null`  | Default click/press function                                                                   |
+| disabled  |   `bool`   | `false` | Should render a disabled button                                                                |
+| options   |  `array`   | `null`  | An array of objects with properties .If empty array is passed, Dropdown button will not render |
+| top       |  `string`  | `"80%"` | Controls the `top` css property for the Dropdown                                               |
+| left      |  `string`  | `"0px"` | Controls the `left` css property for the Dropdown                                              |
+| width     |  `string`  | `null`  | Controls the `width` css property for the Dropdown                                             |
 
 ## Author
 
 👤 **tanvesh01**
 
-- Website: tanvesh.vercel.app
+- Website: [tanvesh.vercel.app](https://tanvesh.vercel.app/)
 
 - Twitter: [@Sarve\_\_\_tanvesh](https://twitter.com/Sarve___tanvesh)
 
@@ -130,6 +138,8 @@ export default App
 
 ## Show your support
 
-Give a ⭐️ if this project helped you!
+Please Give a ⭐️ if this project helped you! It will motivate me to keep working on this!
 
----
+## License
+
+MIT. Copyright (c) 2021 Tanvesh Sarve.

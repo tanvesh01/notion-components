@@ -1,7 +1,7 @@
 {
   "name": "notion-components",
-  "version": "1.0.3",
-  "description": "Made with create-react-library",
+  "version": "0.0.1",
+  "description": "React Component Library for the minimalist",
   "author": "tanvesh01",
   "license": "MIT",
   "repository": "tanvesh01/notion-components",

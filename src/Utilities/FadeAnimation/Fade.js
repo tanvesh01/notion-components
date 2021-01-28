@@ -16,7 +16,7 @@ const Fade = ({ show, children, left, top }) => {
     position: 'absolute'
   }
   useEffect(() => {
-    if (show) setRender(true) // if show true the render true
+    if (show) setRender(true) // if show true then render true
   }, [show])
 
   const onAnimationEnd = () => {

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import classes from './Button.module.css'
 import Fade from '../../Utilities/FadeAnimation/Fade'
 import PropTypes from 'prop-types'
-// right top
+
 const Button = ({ children, options, onClick, left, top, width, disabled }) => {
   const [display, setDisplay] = React.useState(false)
   return (
@@ -80,7 +80,8 @@ Button.propTypes = {
   left: PropTypes.string,
   right: PropTypes.string,
   width: PropTypes.string,
-  options: PropTypes.array
+  options: PropTypes.array,
+  disabled: PropTypes.bool
 }
 
 export default Button
