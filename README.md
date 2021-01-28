@@ -16,9 +16,9 @@
 
 </a>
 
-<a  href="https://twitter.com/Sarve\_\_\_tanvesh"  target="_blank">
+<a  href="https://twitter.com/Sarve___tanvesh"  target="_blank">
 
-<img  alt="Twitter: Sarve\_\_\_tanvesh"  src="https://img.shields.io/twitter/follow/Sarve___tanvesh?label=Follow%20me%21&style=social" />
+<img  alt="Twitter: Sarve\_\_\_tanvesh"  src="https://img.shields.io/twitter/follow/Sarve___tanvesh?label=Contact%20me%21&style=social" />
 
 </a>
 
