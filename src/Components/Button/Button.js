@@ -81,7 +81,8 @@ Button.propTypes = {
   right: PropTypes.string,
   width: PropTypes.string,
   options: PropTypes.array,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func
 }
 
 export default Button
