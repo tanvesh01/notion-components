@@ -33,7 +33,12 @@ const App = () => {
   return (
     <>
       <div className={classes.Layout}>
-        <Button top='100%' left='30px' onClick={() => onPress()}>
+        <Button
+          top='100%'
+          left='30px'
+          options={options}
+          onClick={() => onPress()}
+        >
           New
         </Button>
       </div>
@@ -42,3 +47,7 @@ const App = () => {
 }
 
 export default App
+// "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
+//     "build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
+//     "test": "node ../node_modules/react-scripts/bin/react-scripts.js test",
+//     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject",

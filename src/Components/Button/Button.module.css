@@ -5,6 +5,7 @@
   background-color: rgb(46, 170, 220);
   border: 1px solid #0088be;
   font-weight: 600;
+  margin: 0;
 }
 .root:active {
   background-color: rgb(9, 144, 197);
