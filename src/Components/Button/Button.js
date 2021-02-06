@@ -3,7 +3,15 @@ import classes from './Button.module.css'
 import Fade from '../../Utilities/FadeAnimation/Fade'
 import PropTypes from 'prop-types'
 
-const Button = ({ children, options, onClick, left, top, width, disabled }) => {
+const Button = ({
+  children,
+  options = null,
+  onClick = null,
+  left = '0px',
+  top = '80%',
+  width = null,
+  disabled = false
+}) => {
   const [display, setDisplay] = React.useState(false)
   return (
     <div className={classes.container}>
@@ -78,7 +86,7 @@ const Button = ({ children, options, onClick, left, top, width, disabled }) => {
 
 Button.propTypes = {
   left: PropTypes.string,
-  right: PropTypes.string,
+  top: PropTypes.string,
   width: PropTypes.string,
   options: PropTypes.array,
   disabled: PropTypes.bool,

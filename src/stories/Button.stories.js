@@ -8,13 +8,28 @@ export default {
   component: Button,
   argTypes: {
     disabled: {
+      description: 'When true, Should render a disabled button',
       control: 'boolean'
     },
     options: {
-      control: false
+      table: {
+        disable: true
+      }
     },
     left: {
-      control: false
+      table: {
+        disable: true
+      }
+    },
+    top: {
+      table: {
+        disable: true
+      }
+    },
+    width: {
+      table: {
+        disable: true
+      }
     }
   }
 }
@@ -24,14 +39,6 @@ export const Primary = (args) => (
     Button
   </Button>
 )
-
-Primary.args = {
-  left: {
-    table: {
-      disable: true
-    }
-  }
-}
 
 Primary.storyName = 'Simple Button'
 
