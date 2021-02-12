@@ -5,3 +5,9 @@
   align-items: center;
   background-color: white;
 }
+
+.textbox {
+  font-size: 4rem;
+  font-weight: 700;
+  caret-color: black;
+}
