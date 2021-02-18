@@ -1,20 +1,29 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 
 const TextBox = ({
   initialValue = '',
   placeholder = '',
-  onChangeHandler = null,
-  customClassName = '',
-  disabled = false
+  onChangeHandler,
+  className = '',
+  disabled = false,
+  placeholderColor = '#e1e1e0'
 }) => {
   const textBox = useRef('')
+
+  const [value, setValue] = useState('')
+
   const onChange = (e) => {
-    onChangeHandler(e.target.innerText)
+    if (onChangeHandler) {
+      onChangeHandler(e.target.innerText)
+    }
+    setValue(e.target.innerText)
+    // console.log(textBox.current.innerText)
   }
   useEffect(() => {
     if (initialValue.length > 0) {
       textBox.current.innerText = initialValue
+      setValue(initialValue)
     }
   }, [])
   return (
@@ -25,13 +34,13 @@ const TextBox = ({
       contentEditable={!disabled}
       placeholder={placeholder}
       style={
-        initialValue.length === 0
+        value === ''
           ? {
-              color: '#e1e1e0'
+              color: placeholderColor
             }
           : null
       }
-      className={`${customClassName} `}
+      className={`${className} `}
       data-gramm='false'
     ></div>
   )
@@ -40,9 +49,10 @@ const TextBox = ({
 TextBox.propTypes = {
   initialValue: PropTypes.string,
   disabled: PropTypes.bool,
-  customClassName: PropTypes.string,
+  className: PropTypes.string,
   placeholder: PropTypes.string,
-  onChangeHandler: PropTypes.func
+  onChangeHandler: PropTypes.func,
+  placeholderColor: PropTypes.string
 }
 
 export default TextBox
