@@ -26,6 +26,58 @@ npm install notion-components
 import 'notion-components/dist/index.css'
 ```
 
+### Simple `TextBox` Component
+[![TextBoxDemo.gif](https://s4.gifyu.com/images/TextBoxDemo.gif)](https://gifyu.com/image/akA2)
+
+Renders an *Invisible* `TextBox`. In the above gif, There are two `TextBox` components. One is the heading, beside the emoji. Another one is the description, with a Lot of Text.
+
+The Component itself is customizable with your css, So you have to set things like, `font-size` and `font-weight` to layout the `TextBox` accordingly.
+
+`App.js` :
+   ```jsx
+   import  React, { useState }  from  'react'
+import { TextBox } from  'notion-components'
+import  'notion-components/dist/index.css'
+
+import './App.css'
+
+const App = () => {
+const [text, setText] =  useState('Meeting Notes')
+
+const  onChangeHandler  = (value) => {
+		setText(value)
+}
+return (
+		<TextBox
+			onChangeHandler={onChangeHandler}
+			placeholder='Untitled'
+			initialValue={text}
+			customClassName="textbox"
+		/>
+	);
+}
+export default App
+```
+
+`App.css` :
+```css
+.textbox{
+	font-size: 4rem;
+	font-weight: 700;
+}
+```
+
+### Simple `Button` props
+| Attribute |    Type    |  Default  | Description
+| :-------- | :--------: | :-------: | :------------------------------------------------------------------------------------------------------- |
+| placeholder     |  `string`  | `empty string` | Renders when the `TextBox` is empty
+| disabled  |   `bool`   |  `false`  | Should render a disabled `TextBox`, if set to `true`                                           |
+| className   |   `string`   |  `null`   | Pass your css className here. Works with `css modules` too.                                                                           |
+| onChangeHandler    |   `function`   |  `null`  | A function that gets `value` inside TextBox as an argument at every keypress                                                                                                               |
+| placeholderColor     |  `string | css color`  |  `'#e1e1e0'`   | Css color that sets the placeholder color|
+| initialValue    |  `string`  |  `null`   |  The value inside the `TextBox` before the initial render |
+
+
 ### Simple `Button` rendered with a Dropdown
 
 [![buttonDropdownNeural.gif](https://s2.gifyu.com/images/buttonDropdownNeural.gif)](https://gifyu.com/image/Uvr8)
