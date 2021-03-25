@@ -24,6 +24,10 @@ const App = () => {
           placeholder='Untitled'
           initialValue={text}
           customClassName={classes.textbox}
+          onKeyPress={(e) => {
+            e.persist()
+            console.log(e.key)
+          }}
           // disabled
         />
       </div>

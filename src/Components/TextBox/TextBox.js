@@ -7,10 +7,11 @@ const TextBox = ({
   onChangeHandler,
   className = '',
   disabled = false,
-  placeholderColor = '#e1e1e0'
+  placeholderColor = '#e1e1e0',
+  ...props
 }) => {
   const textBox = useRef('')
-
+  console.log(props)
   const [value, setValue] = useState('')
 
   const onChange = (e) => {
@@ -28,6 +29,7 @@ const TextBox = ({
   }, [])
   return (
     <div
+      {...props}
       ref={textBox}
       onInput={(e) => onChange(e)}
       disabled={true}
